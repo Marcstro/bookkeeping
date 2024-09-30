@@ -1,3 +1,7 @@
+Project description:
+
+A basic API for creating accounts, making deposits or withdrawals, checking balance and lastly seeing deposit history for an account. 
+
 Project Structure:
 
 A SpringBoot application using jdk 17, built with maven and a H2 temporary database
@@ -68,6 +72,8 @@ Since this was a short project with a 2 hour time limit, here are some things I 
 - prettified transaction JSON objects
 - Maybe some basic authentication on endpoints
 - returning specific http status
+
+and more.
 
 
 
