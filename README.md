@@ -14,27 +14,37 @@ API Endpoints
 1. Get Balance
 
     Endpoint: GET /api/wallet/balance/{accountId}
+
     Description: Retrieves the current balance of the specified account.
+   
     Returns: 200 OK with the balance as Double.
 
-2. Transfer Funds
+3. Transfer Funds
 
     Endpoint: POST /api/wallet/transfer
+   
     Description: Transfers funds to an account (positive for deposit, negative for withdrawal).
+   
     Params: accountId (String), amount (double)
+   
     Returns: 200 OK with a message indicating the result (Transfer successful or other status).
 
-3. List Transactions
+5. List Transactions
 
     Endpoint: GET /api/wallet/transactions/{accountId}
+   
     Description: Fetches the transaction history of the specified account.
+   
     Returns: 200 OK with a list of transactions (List<Transaction>).
 
-4. Create Account
+7. Create Account
 
     Endpoint: POST /api/wallet/create-account
+   
     Description: Creates a new account with the provided account ID.
+   
     Params: accountId (String)
+   
     Returns: 200 OK with a message indicating the result (Account created successfully or other status).
 
 
@@ -49,7 +59,7 @@ I went with maven since I daily use Gradle and wanted a bit of a difference. No 
 When it came to domain classes I considered saving data in just Lists of accounts and transactions in the service layer or some saving layer. But decided to use a H2 "database" to show I could implement database features.
 
 "Missed" feature designs:
-Since this was a short project with a 2 hour time limit, here are some things I would've implemented had I had more time, without extending basic features of the application.
+Since this was a short project with a 2 hour time limit, here are some things I would've implemented had I had more time, without extending basic user features of the application.
 - Component tests
 - logging
 - Sooooo much exception handling. Like handling erronous parameters
